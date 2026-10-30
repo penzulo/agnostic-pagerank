@@ -38,21 +38,21 @@ A data-agnostic PageRank library. The solver only knows about graphs; adapters c
 - [x] Test that results are the same regardless of edge input order
 
 ## Phase 4: Website Adapter (`adapters/web/`)
-- [ ] Crawler: start URL, BFS, stay within one domain
-- [ ] Respect `robots.txt` and add a delay between requests
-- [ ] Normalize URLs (strip fragments, trailing slashes, tracking params) and dedupe
-- [ ] Skip non-HTML links (PDFs, images)
-- [ ] Set a page cap (start at 500, then raise toward 5,000)
-- [ ] Extract internal links and emit edges `(page, linked_page)`
-- [ ] Cache crawled pages to disk so re-runs don't re-crawl
-- [ ] Export the edge list to CSV
-- [ ] Choose a target site (docs site, college site, or Wikipedia category)
+- [x] Crawler: start URL, BFS, stay within one domain
+- [x] Respect `robots.txt` and add a delay between requests
+- [x] Normalize URLs (strip fragments, trailing slashes, tracking params) and dedupe
+- [x] Skip non-HTML links (PDFs, images)
+- [x] Set a page cap (start at 500, then raise toward 5,000)
+- [x] Extract internal links and emit edges `(page, linked_page)`
+- [x] Cache crawled pages to disk so re-runs don't re-crawl
+- [x] Export the edge list to CSV
+- [x] Choose a target site (docs site, college site, or Wikipedia category)
 
 ## Phase 5: Public Dataset Adapter (scale test)
-- [ ] Write a SNAP edge-list loader (`web-Stanford` first, ~280k nodes)
-- [ ] Run the solver on it and record runtime and iteration count
-- [ ] Try `web-Google` (~875k nodes) if memory allows
-- [ ] Confirm results against `networkx.pagerank` on a sampled subgraph
+- [x] Write a SNAP edge-list loader (`web-Stanford` first, ~280k nodes)
+- [x] Run the solver on it and record runtime and iteration count
+- [x] Try `web-Google` (~875k nodes) if memory allows
+- [x] Confirm results against `networkx.pagerank` on a sampled subgraph
 
 ## Phase 6: Experiments & Analysis
 - [ ] Plot convergence (error vs iteration) for damping = 0.5, 0.7, 0.85, 0.95
